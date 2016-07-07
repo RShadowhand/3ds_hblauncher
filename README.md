@@ -10,26 +10,27 @@ To use hbmenu as your ninjhax menu, simply rename the 3dsx executable to boot.3d
 
 Press START in hbmenu to reboot your console into home menu. Use the D-PAD, CIRCLE-PAD or the touchscreen to select an application, and press A or touch it again to start it.
 
-hbmenu starts in the sdmc:/3ds/ directory for applications; it will recognise folders containing "boot.3dsx" or "\[folder name\].3dsx" as "application bundles", other folders can be opened and browsed as you'd expect. You can have an icon file named "icon.bin", "icon.smdh", "icon.icn", "\[folder name\].smdh" or "\[folder name\].icn". hbmenu will also recognize stray 3dsx executables located in the sdmc:/3ds/ directory.
+hbmenu starts in the sdmc:/3ds/apps/ directory for applications; it will recognise folders containing "boot.3dsx" or "\[folder name\].3dsx" as "application bundles", other folders can be opened and browsed as you'd expect. You can have an icon file named "icon.bin", "icon.smdh", "icon.icn", "\[folder name\].smdh" or "\[folder name\].icn". hbmenu will also recognize stray 3dsx executables located in the sdmc:/3ds/apps/ directory.
 
 Here is an example directory structure that hbmenu will have no trouble recognizing :
 
 - sdmc:/
   - 3ds/
-    - 3dscraft/
-      - 3dscraft.3dsx
-      - icon.bin
-    - blargsnes/
-      - boot.3dsx
-      - blargsnes.smdh
-    - gameyob/
-      - gameyob.3dsx
-      - gameyob.icn
-    - cubedemo/
-      - boot.3dsx
-      - icon.icn
-    - 3dnes.3dsx
-    - ftpony.3dsx
+    - apps/
+      - 3dscraft/
+        - 3dscraft.3dsx
+        - icon.bin
+      - blargsnes/
+        - boot.3dsx
+        - blargsnes.smdh
+      - gameyob/
+        - gameyob.3dsx
+        - gameyob.icn
+      - cubedemo/
+        - boot.3dsx
+        - icon.icn
+      - 3dnes.3dsx
+      - ftpony.3dsx
 
 If hbmenu does not find an icon file to associate with a given 3dsx, it will display a default icon and the path to the executable instead of the actual metadata for that executable.
 
@@ -79,8 +80,6 @@ setting the current working directory if you already have data files in a partic
 
     CHOST=arm-none-eabi ./configure --static --prefix=$(PORTLIBS)
     make && make install
-
-Binaries of 3ds_hb_menu can be downloaded from https://github.com/smealum/3ds_hb_menu/releases
 
 #### Contributing
 
