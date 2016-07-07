@@ -311,7 +311,7 @@ int load3DSX(int sock, u32 remote) {
 
 	int response = 0;
 
-	chdir("sdmc:/3ds/");
+	chdir("sdmc:/3ds/apps/");
 
 	int fd = open(filename,O_CREAT|O_WRONLY,ACCESSPERMS);
 

@@ -9,7 +9,7 @@
 #include "smdh.h"
 #include "utils.h"
 
-#define DEFAULT_DIRECTORY "/3ds/"
+#define DEFAULT_DIRECTORY "/3ds/apps/"
 
 static char cwd[1024] = DEFAULT_DIRECTORY;
 
